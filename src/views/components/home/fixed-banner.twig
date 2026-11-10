@@ -1,0 +1,29 @@
+{#
+| Variable    | Type    | Description                                                      |
+|-------------|---------|------------------------------------------------------------------|
+| url         | string  |                                                                  |
+| image.url   | string  |                                                                  |
+| image.alt   | ?string |                                                                  |
+| position    | Int     | Sorting number start from zero                                   |
+#}
+<section class="s-block s-block--fixed-banner wide-placeholder">
+    <div class="container">
+        {% set is_first = position == 0 %}
+        {% set alt_text = image.alt|trim ? image.alt : 'fixed banner' %}
+        <a href="{{ url }}" class="banner banner--fixed overflow-hidden" aria-label="Banner {{ alt_text }}">
+            <img
+                width="1200"
+                height="300"
+                src="{{ is_first ? image.url : ('images/s-empty-wide.png' | asset) }}"
+                {% if not is_first %}
+                    data-src="{{ image.url }}"
+                    class="lazy"
+                {% else %}
+                    fetchpriority="high"
+                {% endif %}
+                alt="{{ alt_text }}"
+				style="height:auto;max-width:100%;object-fit: contain;"
+            />
+        </a>
+    </div>
+</section>
