@@ -1,0 +1,55 @@
+{
+  "name": "theme-raed",
+  "version": "1.0.3",
+  "description": "Salla Theme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SallaApp/theme-raed.git"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "webpack --mode production",
+    "prod": "webpack --mode production",
+    "development": "webpack --mode development",
+    "watch": "webpack --mode development --watch"
+  },
+  "author": "Salla",
+  "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "animejs": "^4.2.2",
+    "fslightbox": "^3.7.4",
+    "lite-youtube-embed": "^0.3.3",
+    "mmenu-light": "^3.2.2",
+    "sweetalert2": "^11.26.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@salla.sa/twilight": "^2.14.279",
+    "@salla.sa/twilight-components": "^2.14.279",
+    "@salla.sa/twilight-tailwind-theme": "^2.14.279",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "babel-loader-exclude-node-modules-except": "^1.2.1",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "glob": "^11.0.3",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^10.4.0",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.6",
+    "tailwindcss": "^3.4.18",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
